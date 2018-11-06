@@ -4,7 +4,7 @@ import argparse
 import os, sys
 
 from jericho import FrotzEnv
-from agent_code.nail import NailAgent
+from agent.nail import NailAgent
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
