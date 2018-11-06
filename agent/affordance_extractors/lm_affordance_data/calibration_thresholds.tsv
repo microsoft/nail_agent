@@ -1,0 +1,12 @@
+# Delete this line to recalculate the thresholds on the next run.
+ -4.570	 -4.410	 -3.520	portable
+ -5.240	 -4.950	 -4.950	edible
+ -5.570	 -4.630	 -3.640	moveable
+ -1.000	 -4.480	 -4.480	switchable
+ -5.510	 -5.300	 -3.150	flammable
+ -1.000	 -4.100	 -4.100	openable
+ -5.360	 -4.540	 -0.930	lockable
+ -5.970	 -5.520	 -2.860	container
+ -1.000	 -5.080	 -5.080	person
+ -1.000	 -3.540	 -3.540	enemy
+ -7.700	 -4.000	 -1.000	unknown actions

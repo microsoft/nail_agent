@@ -1,0 +1,10 @@
+﻿portable,take,drop,give,put,place,set,get,leave,takes,took,drops,dropped,gives,gave,puts,places,placed,sets,gets,got,leaves,left,taking,dropping,giving,putting,placing,setting,getting,leaving
+edible,eat,drink,swallow,consume,eats,ate,drinks,drank,swallows,swallowed,consumes,consumed,eating,drinking,swallowing,consuming
+moveable,move,push,pull,drag,lift,moves,moved,pushes,pushed,pulls,pulled,drags,dragged,lifts,lifted,moving,pushing,pulling,dragging,lifting
+switchable,turn on,switch on,turn off,switch off,turns on,turned on,switches on,switched on,turns off,turned off,switches off,switched off,turning on,switching on,turning off,switching off
+flammable,light,ignite,extinguish,lights,lit,ignites,ignited,extinguishes,extinguished,lighting,igniting,extinguishing
+openable,open,close,opens,opened,closes,closed,opening,closing
+lockable,lock,unlock,locks,locked,unlocks,unlocked,locking,unlocking
+container,look in,search in,empty,fill,looks in,looked in,searches in,searched in,empties,emptied,fills,filled,looking in,searching in,emptying,filling,fill up,fills up,filled up,filling up
+person,ask,talk to,help,hug,kiss,bribe,pay,asks,asked,talks to,talked to,helps,helped,hugs,hugged,kisses,kissed,bribes,bribed,pays,paid,asking,talking to,helping,hugging,kissing,bribing,paying
+enemy,attack,hit,kill,fight,shoot
