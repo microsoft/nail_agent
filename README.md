@@ -1,7 +1,8 @@
 # NAIL agent
 Navigate Acquire Interact Learn
 
-NAIL is a general game-playing agent designed for parser-based interactive fiction games.
+NAIL is a general game-playing agent designed for parser-based interactive fiction games 
+([Hausknecht et al. 2019](https://arxiv.org/abs/1902.04259)).
 NAIL employs a simple heuristic: examine the current location to identify relevant objects,
 interact with the identified objects, navigate to a new location, and repeat.
 Though simple, this loop proves effective across a wide variety of games.
