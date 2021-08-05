@@ -7,7 +7,7 @@ from action import Action
 def first_sentence(text):
     """ Extracts the first sentence from text. """
     tokens = gv.nlp(text)
-    return next(tokens.sents).merge().text
+    return next(tokens.sents).text
 
 
 def tokenize(description):

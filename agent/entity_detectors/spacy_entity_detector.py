@@ -13,6 +13,9 @@ class SpacyEntityDetector(EntityDetector):
 
 
     def detect(self, observation_text):
+        # Spacy has trouble detecting entities ending with \n.
+        # Ref: https://github.com/explosion/spaCy/issues/4792#issuecomment-614295948
+        observation_text = observation_text.replace("\n", " ")
         doc = gv.nlp(observation_text)
         nouns = []
         for chunk in doc.noun_chunks:
