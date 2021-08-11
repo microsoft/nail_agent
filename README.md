@@ -1,7 +1,7 @@
 # NAIL agent
 Navigate Acquire Interact Learn
 
-NAIL is a general game-playing agent designed for parser-based interactive fiction games 
+NAIL is a general game-playing agent designed for parser-based interactive fiction games
 ([Hausknecht et al. 2019](https://arxiv.org/abs/1902.04259)).
 NAIL employs a simple heuristic: examine the current location to identify relevant objects,
 interact with the identified objects, navigate to a new location, and repeat.
@@ -16,36 +16,33 @@ where it was evaluated on a set of twenty unknown parser-based IF games.
 * Python 3
 
 ## Installation
-* Install basic build tools.
-    * sudo apt-get update
-    * sudo apt-get install build-essential
-    * sudo apt-get install python3-dev
+Install basic build tools.
 
-* Install [fastText](https://github.com/facebookresearch/fastText#building-fasttext-for-python)
-    * pip3 install pybind11
-    * git clone https://github.com/facebookresearch/fastText.git
-    * cd fastText
-    * pip3 install .
-    * cd ..
+    sudo apt-get update
+    sudo apt-get install build-essential
+    sudo apt-get install python3-dev
 
-* Install [Jericho](https://github.com/Microsoft/jericho)
-    * pip3 install jericho
-* Clone this nail_agent repository to your Linux machine.
-* Download the NAIL agent's language model to the nail_agent/agent/affordance_extractors/language_model directory:
-    * wget http://download.microsoft.com/download/B/8/8/B88DDDC1-F316-412A-94B3-025788436054/nail_agent_lm.zip
-* unzip nail_agent_lm.zip
-    * The unzipped directory should contain 1028 files.
+> **Note:** We advise users to use virtual environments to avoid Python packages from different projects to interfere with each other. Popular choices are [Conda Environments](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) and [venv](https://docs.python.org/3/library/venv.html).
 
-* pip3 install numpy
-* pip3 install fuzzywuzzy
-* pip3 install spacy
-* python3 -m spacy download en
-* pip3 install python-Levenshtein
+Clone this **nail_agent** repository to your Linux machine.
+
+    git clone https://github.com/microsoft/nail_agent.git
+
+Download the NAIL agent's language model (8.1Gb, 1028 files) to the `nail_agent/agent/affordance_extractors/language_model` directory:
+
+    cd nail_agent/
+    wget http://download.microsoft.com/download/B/8/8/B88DDDC1-F316-412A-94B3-025788436054/nail_agent_lm.zip
+    unzip nail_agent_lm.zip -d agent/affordance_extractors/language_model/
+
+Install dependencies:
+
+    pip install -r requirements.txt
+    python -m spacy download en_core_web_sm
 
 ## Usage
-* Obtain a z-machine game (like zork1.z5)
-* cd nail_agent
-* python3 run_nail_agent.py <path_to_game>
+Obtain a Z-Machine game (like `zork1.z5`). Then, within the `nail_agent/` folder, run the following command:
+
+    python run_nail_agent.py <path_to_game>
 
 ## Contributing
 

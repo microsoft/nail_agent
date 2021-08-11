@@ -28,7 +28,10 @@ def main():
     agent = NailAgent(seed=args.seed, env=env, rom_name=os.path.basename(args.game))
 
     # Get the first observation from the environment.
-    obs = env.reset()
+    obs, info = env.reset()
+
+    # Keep track of the maximum score achieved.
+    max_score = 0
 
     # Run the agent on the environment for the specified number of steps.
     for step_num in range(args.steps):
@@ -36,22 +39,25 @@ def main():
         action = agent.take_action(obs)
 
         # Pass the action to the environment.
-        new_obs, score, done, info = env.step(action)
+        new_obs, reward, done, info = env.step(action)
+        max_score = max(info["score"], max_score)
 
         # Update the agent.
-        agent.observe(obs, action, score, new_obs, done)
+        agent.observe(obs, action, reward, new_obs, done)
         obs = new_obs
 
         # Output this step.
-        print("Step {}   Action [{}]   Score {}\n{}".format(step_num, action, score, obs))
+        print("Step {}   Action [{}]   Score {}\n{}".format(step_num, action, info["score"], obs))
 
         # Check for done (such as on death).
         if done:
             print("Environment returned done=True. So reset the environment.\n")
-            obs = env.reset()
+            obs, info = env.reset()
 
     # Clean up the agent.
     agent.finalize()
+
+    print(f"Max score achieved: {max_score}")
 
 
 if __name__ == "__main__":
